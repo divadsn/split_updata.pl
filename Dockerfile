@@ -2,7 +2,10 @@ FROM alpine
 LABEL maintainer "David Sn <divad.nnamtdeis@gmail.com>"
 
 # Install perl with perl-archive-zip for crc32 checksums
-RUN apk add --update perl perl-archive-zip && rm -rf /var/cache/apk/*
+RUN apk --no-cache add \
+        perl \
+        perl-archive-zip \
+    && rm -rf /var/cache/apk/*
 
 # Copy extract script
 COPY splitupdate /bin/
