@@ -24,7 +24,7 @@
 use strict;
 use warnings;
 
-my $CRC_CHECK= -e "crc" && -x _;
+my $CRC_CHECK= -e "crc32" && -x _;
 
 # Turn on print flushing.
 $|++;
